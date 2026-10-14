@@ -7,7 +7,9 @@ int main () {
     setlocale(LC_ALL, "Portuguese"); 
 
     int opt = 0;
-
+    
+    int qtdSimulacoes;
+    
     int qtd_equipes, jogos_disputados;
 
     int vitorias_equipe = 0, empates_equipe = 0, derrotas_equipe = 0, total_pontos, total_jogos = 0;
@@ -111,6 +113,54 @@ int main () {
         break;
 
         case 4:
+            do {
+                printf("\nEscreva o número de simulações que você deseja realizar (escolha um número entre 1 e 5)\n");
+                scanf("%d", &qtdSimulacoes);
+                } while(qtdSimulacoes < 1 || qtdSimulacoes > 5);
+            for(int i = 1; i <= qtdSimulacoes; i++){
+                int total_jogos_simulacao = 0, vitorias_equipe_simulacao, total_pontos_simulacao = 0, empates_equipe_simulacao, derrotas_equipe_simulacao;
+
+                do { 
+                    int total_jogos_simulacao = 0, total_pontos_simulacao = 0;
+                    printf("Digite a quantidade de vitórias da equipe %d: ", i);
+                    scanf ("%d", &vitorias_equipe_simulacao);
+                    total_jogos_simulacao += vitorias_equipe_simulacao;
+                    total_pontos_simulacao = vitorias_equipe_simulacao * 3;
+
+                    printf("Digite a quantidade de empates da equipe %d: ", i);
+                    scanf ("%d", &empates_equipe_simulacao);
+                    total_jogos_simulacao += empates_equipe_simulacao;
+                    total_pontos_simulacao += empates_equipe_simulacao;
+
+                    printf("Digite a quantidade de derrotas da equipe %d: ", i);
+                    scanf ("%d", &derrotas_equipe_simulacao);
+                    total_jogos_simulacao += derrotas_equipe_simulacao;
+
+                    if (total_jogos_simulacao == jogos_disputados) {
+                        printf ("%d jogos por equipe\n", jogos_disputados);
+                        printf ("Equipe %d: %d Vitórias, %d Empates e %d derrotas\n", i, vitorias_equipe_simulacao, empates_equipe_simulacao, derrotas_equipe_simulacao);
+                        printf ("Pontuação: %d\n", total_pontos_simulacao);
+                        if (total_pontos_simulacao >= 15) {
+                            printf ("Situação: Excelente campanha\n");
+                        }
+                        else if (total_pontos_simulacao >= 10) {
+                            printf ("Situação: Boa campanha\n");
+                        }
+                        else if (total_pontos_simulacao >= 5) {
+                            printf ("Situação: Campanha regular\n");
+                        }
+                        else {
+                            printf ("Situação: Campanha ruim\n");
+                        }
+                        
+                    }
+
+                    if (total_jogos_simulacao != jogos_disputados) {
+                        printf ("Quantidade de partidas irregular!");
+                    }
+                } while (total_jogos_simulacao != jogos_disputados);
+                
+            }
         
         break;
 

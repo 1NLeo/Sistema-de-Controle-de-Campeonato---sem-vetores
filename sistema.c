@@ -10,6 +10,8 @@ int main () {
 
     int qtd_equipes, jogos_disputados;
 
+    int vitorias_equipe = 0, empates_equipe = 0, derrotas_equipe = 0, total_pontos;
+
     do {
         printf ("Digite a quantidade de equipes participantes: ");
         scanf ("%d", &qtd_equipes);
@@ -37,6 +39,11 @@ int main () {
 
         switch (opt) {
         case 1:
+            
+            for (int i = 1; i <= qtd_equipes; i++) {
+                printf("Digite a quantidade de vitória da equipe %d", i);
+                scanf ("%d", &vitorias_equipe);
+            }
         
         break;
         
@@ -53,7 +60,8 @@ int main () {
         break;
 
         case 5:
-        printf ("Saindo...");
+        printf ("Sistema encerrado com sucesso.\n");
+        printf ("Obrigado por utilizar o sistema.");
         break;
 
         default:
@@ -62,7 +70,7 @@ int main () {
     }
     }
 
-    
+
     
     return 0;
 }

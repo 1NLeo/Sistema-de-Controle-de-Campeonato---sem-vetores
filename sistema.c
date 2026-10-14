@@ -52,7 +52,20 @@ int main () {
         break;
 
         case 3:
-        
+            printf("Resultado    Pontuação\n");
+            printf("Vitoria   -  3 pontos\n");
+            printf("Empate    -  1 ponto\n");
+            printf("Derrota   - 0 pontos\n");
+            printf("\n ================\n");
+            printf("Pontos      Situação\n");
+            printf("15 ou mais  Excelente campanha\n");
+            printf("De 10 a 14  Boa campanha\n");
+            printf("De 5 a 9    Campanha regular\n");
+            printf("Menos de 5  Campanha ruim\n");
+            printf("\n ================\n");
+            printf("Limites\n");
+            printf("Quantidade de equipes: entre 3 e 10.\n");
+            printf("Quantidade de jogos a disputar: entre 1 e 10.\n");
         break;
 
         case 4:

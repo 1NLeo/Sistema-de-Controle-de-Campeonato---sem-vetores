@@ -155,8 +155,7 @@ Projeto acadêmico desenvolvido em trio para a disciplina de **Práticas Profiss
 
 **Integrantes:**
 - Leonardo Maciel Correia
-- [Nome do segundo integrante]
-- [Nome do terceiro integrante]
+- Luís Felipe Alves Santos
 
 **Professor:** Sidney de Castro Lima
 

@@ -121,7 +121,8 @@ int main () {
                 int total_jogos_simulacao = 0, vitorias_equipe_simulacao, total_pontos_simulacao = 0, empates_equipe_simulacao, derrotas_equipe_simulacao, j = 1;
 
                 do { 
-                    int total_jogos_simulacao = 0, total_pontos_simulacao = 0;
+                    total_jogos_simulacao = 0;
+                    total_pontos_simulacao = 0;
                     printf("Digite a quantidade de vitórias da equipe %d: ", j);
                     scanf ("%d", &vitorias_equipe_simulacao);
                     total_jogos_simulacao += vitorias_equipe_simulacao;

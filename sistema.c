@@ -118,27 +118,27 @@ int main () {
                 scanf("%d", &qtdSimulacoes);
                 } while(qtdSimulacoes < 1 || qtdSimulacoes > 5);
             for(int i = 1; i <= qtdSimulacoes; i++){
-                int total_jogos_simulacao = 0, vitorias_equipe_simulacao, total_pontos_simulacao = 0, empates_equipe_simulacao, derrotas_equipe_simulacao;
+                int total_jogos_simulacao = 0, vitorias_equipe_simulacao, total_pontos_simulacao = 0, empates_equipe_simulacao, derrotas_equipe_simulacao, j = 1;
 
                 do { 
                     int total_jogos_simulacao = 0, total_pontos_simulacao = 0;
-                    printf("Digite a quantidade de vitórias da equipe %d: ", i);
+                    printf("Digite a quantidade de vitórias da equipe %d: ", j);
                     scanf ("%d", &vitorias_equipe_simulacao);
                     total_jogos_simulacao += vitorias_equipe_simulacao;
                     total_pontos_simulacao = vitorias_equipe_simulacao * 3;
 
-                    printf("Digite a quantidade de empates da equipe %d: ", i);
+                    printf("Digite a quantidade de empates da equipe %d: ", j);
                     scanf ("%d", &empates_equipe_simulacao);
                     total_jogos_simulacao += empates_equipe_simulacao;
                     total_pontos_simulacao += empates_equipe_simulacao;
 
-                    printf("Digite a quantidade de derrotas da equipe %d: ", i);
+                    printf("Digite a quantidade de derrotas da equipe %d: ", j);
                     scanf ("%d", &derrotas_equipe_simulacao);
                     total_jogos_simulacao += derrotas_equipe_simulacao;
 
                     if (total_jogos_simulacao == jogos_disputados) {
                         printf ("%d jogos por equipe\n", jogos_disputados);
-                        printf ("Equipe %d: %d Vitórias, %d Empates e %d derrotas\n", i, vitorias_equipe_simulacao, empates_equipe_simulacao, derrotas_equipe_simulacao);
+                        printf ("Equipe %d: %d Vitórias, %d Empates e %d derrotas\n", j, vitorias_equipe_simulacao, empates_equipe_simulacao, derrotas_equipe_simulacao);
                         printf ("Pontuação: %d\n", total_pontos_simulacao);
                         if (total_pontos_simulacao >= 15) {
                             printf ("Situação: Excelente campanha\n");
@@ -158,6 +158,7 @@ int main () {
                     if (total_jogos_simulacao != jogos_disputados) {
                         printf ("Quantidade de partidas irregular!");
                     }
+                    j++;
                 } while (total_jogos_simulacao != jogos_disputados);
                 
             }

@@ -4,52 +4,21 @@
 
 Este projeto foi desenvolvido como atividade avaliativa da disciplina de **Práticas Profissionais II**, sob orientação do professor **Sidney de Castro Lima**.
 
-O objetivo é desenvolver um sistema de controle de campeonato utilizando a linguagem **C**, permitindo registrar os resultados das equipes, calcular pontuações, classificar campanhas e apresentar estatísticas gerais do campeonato.
+O sistema foi desenvolvido em **linguagem C** e permite registrar resultados de equipes, calcular pontuações, classificar campanhas e apresentar estatísticas gerais de um campeonato.
 
-O principal desafio da atividade é implementar todas as funcionalidades **sem utilizar vetores, matrizes, structs ou alocação dinâmica**, trabalhando exclusivamente com variáveis simples, estruturas condicionais e estruturas de repetição.
+O principal desafio é implementar essas funcionalidades **sem utilizar vetores, matrizes, structs ou alocação dinâmica**, aplicando conceitos fundamentais de programação estruturada.
 
 ## ⚙️ Funcionalidades
 
-O sistema possui um menu interativo com cinco funcionalidades principais:
+O sistema possui um menu interativo com cinco opções:
 
-**1. Registrar resultados do campeonato**
-
-- Registrar vitórias, empates e derrotas de cada equipe.
-- Validar os resultados informados.
-- Calcular automaticamente a pontuação.
-- Classificar o desempenho de cada equipe.
-- Atualizar as estatísticas gerais do campeonato.
-
-**2. Mostrar resumo do campeonato**
-
-- Quantidade de equipes participantes.
-- Total de vitórias, empates e derrotas.
-- Pontuação total e média de pontos.
-- Quantidade de equipes por classificação.
-- Maior e menor pontuação registrada.
-- Identificação das primeiras equipes com maior e menor pontuação.
-- Quantidade de equipes empatadas nas pontuações extremas.
-
-**3. Mostrar regulamento**
-
-- Exibir as regras de pontuação.
-- Apresentar os critérios de classificação.
-- Informar os limites de equipes e partidas.
-
-**4. Simular campanha de uma equipe**
-
-- Realizar de 1 a 5 simulações.
-- Informar resultados hipotéticos.
-- Calcular os pontos e a classificação.
-- Preservar as estatísticas do campeonato original.
-
-**5. Encerrar sistema**
-
-- Finalizar a execução do programa.
+1. **Registrar resultados do campeonato:** permite informar vitórias, empates e derrotas das equipes, calcular suas pontuações e classificar as campanhas.
+2. **Mostrar resumo do campeonato:** apresenta estatísticas gerais, incluindo totais, média de pontos, classificações e pontuações extremas.
+3. **Mostrar regulamento:** exibe as regras de pontuação, classificações e limites do campeonato.
+4. **Simular campanha de uma equipe:** permite realizar simulações de resultados sem modificar as estatísticas do campeonato.
+5. **Encerrar sistema:** finaliza a execução do programa.
 
 ## 📊 Sistema de pontuação
-
-Cada equipe recebe pontos de acordo com os resultados obtidos:
 
 | Resultado | Pontuação |
 |---|---|
@@ -57,7 +26,7 @@ Cada equipe recebe pontos de acordo com os resultados obtidos:
 | Empate | 1 ponto |
 | Derrota | 0 pontos |
 
-A pontuação total é calculada pela fórmula:
+A pontuação de cada equipe é calculada utilizando:
 
 **Pontos = (Vitórias × 3) + Empates**
 
@@ -70,88 +39,137 @@ A pontuação total é calculada pela fórmula:
 | 5 a 9 pontos | Campanha regular |
 | Menos de 5 pontos | Campanha ruim |
 
-## 🛠️ Tecnologias e conceitos utilizados
+## 🛠️ Tecnologias utilizadas
 
-**Linguagem:** C
+- **Linguagem:** C
+- **Compilador:** GCC
+- **Controle de versão:** Git e GitHub
 
-**Conceitos de programação:**
+### Conceitos aplicados
 
-- `if`, `else if` e `else` — estruturas condicionais.
-- `switch` — gerenciamento das opções do menu.
-- `for` — repetição para processamento de equipes e simulações.
-- `while` — validação de entradas e controle do menu.
-- `printf` e `scanf` — entrada e saída de dados.
+- Estruturas condicionais: `if`, `else if` e `else`.
+- Estrutura de seleção: `switch`.
+- Estruturas de repetição: `for`, `while` e `do while`.
+- Entrada e saída de dados: `scanf` e `printf`.
 - Variáveis simples, contadores e acumuladores.
 - Operadores aritméticos, relacionais e lógicos.
 
-## 📋 Regras e validações
-
-Para garantir o funcionamento do sistema, foram estabelecidas as seguintes restrições:
-
-- O campeonato deve possuir entre **3 e 10 equipes**.
-- Cada equipe deve disputar entre **1 e 10 jogos**.
-- Todas as equipes devem possuir a mesma quantidade de jogos.
-- Não são permitidos valores negativos para vitórias, empates ou derrotas.
-- A soma dos resultados deve corresponder ao número de jogos configurado.
-- Entradas numéricas inválidas devem ser solicitadas novamente.
-- Um novo registro substitui o resumo anterior.
-- As simulações não podem modificar os resultados registrados.
-
-## 💻 Como executar
+## 🚀 Instalação e execução
 
 ### Pré-requisitos
 
-É necessário possuir um compilador C instalado, como o **GCC**.
+Para executar o projeto, é necessário ter instalado:
 
-### 1. Clone o repositório
+- **Git:** para clonar o repositório.
+- **GCC:** para compilar o código em C.
+- Um terminal, como o Terminal do Linux, PowerShell ou o terminal integrado do VS Code.
 
-```bash
-git clone URL_DO_REPOSITORIO
-```
+### 1. Clonar o repositório
 
-### 2. Acesse a pasta do projeto
-
-```bash
-cd NOME_DO_REPOSITORIO
-```
-
-### 3. Compile o programa
-
-Considerando que o código esteja no arquivo `main.c`:
+Abra o terminal e execute:
 
 ```bash
-gcc main.c -o campeonato
+git clone https://github.com/1NLeo/Sistema-de-Controle-de-Campeonato---sem-vetores.git
 ```
 
-### 4. Execute o programa
+### 2. Acessar o diretório do projeto
+
+```bash
+cd Sistema-de-Controle-de-Campeonato---sem-vetores
+```
+
+### 3. Compilar o código
+
+O arquivo principal do projeto é `sistema.c`, localizado na raiz do repositório.
 
 **Linux:**
 
 ```bash
-./campeonato
+gcc sistema.c -o sistema
 ```
 
-**Windows:**
+**Windows (PowerShell):**
 
 ```powershell
-.\campeonato.exe
+gcc sistema.c -o sistema.exe
 ```
+
+Esses comandos utilizam o GCC para compilar o código-fonte e gerar um arquivo executável.
+
+### 4. Executar o programa
+
+Após a compilação, execute o programa de acordo com seu sistema operacional.
+
+**Linux:**
+
+```bash
+./sistema
+```
+
+**Windows (PowerShell):**
+
+```powershell
+.\sistema.exe
+```
+
+O sistema será iniciado diretamente no terminal.
+
+### 5. Utilizar o sistema
+
+Após iniciar o programa:
+
+1. Informe a quantidade de equipes participantes, entre 3 e 10.
+2. Informe a quantidade de jogos disputados por equipe, entre 1 e 10.
+3. Selecione uma das opções do menu principal.
+4. Informe os resultados solicitados e consulte as estatísticas.
+5. Selecione a opção 5 para encerrar.
+
+### Instalação do GCC no Linux
+
+Caso esteja utilizando Ubuntu ou distribuições derivadas e ainda não possua o compilador, execute:
+
+```bash
+sudo apt update
+sudo apt install build-essential git
+```
+
+Para verificar a instalação:
+
+```bash
+gcc --version
+```
+
+No Windows, é necessário ter uma distribuição do GCC, como MinGW-w64, instalada e configurada no PATH.
+
+## 📋 Regras do projeto
+
+De acordo com a proposta acadêmica:
+
+- O campeonato deve possuir entre 3 e 10 equipes.
+- Cada equipe deve disputar entre 1 e 10 jogos.
+- Todas as equipes devem possuir a mesma quantidade de jogos.
+- A soma de vitórias, empates e derrotas deve corresponder à quantidade de jogos definida.
+- Os resultados não devem possuir valores negativos.
+- Um novo registro deve substituir o resumo anterior.
+- As simulações devem ser independentes do registro principal.
+
+O desenvolvimento deve respeitar a restrição de utilizar apenas variáveis simples, sem vetores, matrizes, estruturas ou alocação dinâmica.
 
 ## 🎯 Objetivos de aprendizagem
 
-O desenvolvimento deste projeto tem como finalidade consolidar os conhecimentos fundamentais de programação estruturada, especialmente:
+O projeto busca consolidar conhecimentos fundamentais de programação, incluindo:
 
-- Aplicação de estruturas condicionais e de repetição.
-- Desenvolvimento de menus interativos.
-- Validação de dados fornecidos pelo usuário.
-- Utilização de contadores e acumuladores.
-- Resolução de problemas sem estruturas de armazenamento como vetores.
-- Organização e interpretação de dados estatísticos.
-- Desenvolvimento do raciocínio lógico e algorítmico.
+- Desenvolvimento de algoritmos estruturados.
+- Utilização de estruturas condicionais e de repetição.
+- Validação de entradas fornecidas pelo usuário.
+- Manipulação de contadores e acumuladores.
+- Cálculo de estatísticas e classificação de resultados.
+- Organização e manutenção de código em equipe.
+- Versionamento colaborativo com Git e GitHub.
 
-## 👨‍💻 Autores
+## 👨‍💻 Desenvolvedores
 
-Projeto acadêmico desenvolvido em trio para a disciplina de **Práticas Profissionais II**.
+Projeto acadêmico desenvolvido para a disciplina de **Práticas Profissionais II**.
 
 **Integrantes:**
 - Leonardo Maciel Correia

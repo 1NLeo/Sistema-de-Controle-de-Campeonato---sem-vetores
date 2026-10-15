@@ -141,8 +141,8 @@ int main () {
                 printf ("Quantidade de jogos disputados: %d\n", jogos_disputados);
 
                 printf ("Total de vitórias: %d\n", total_vitorias);
-                printf ("Total de empates: %d\n", total_vitorias);
-                printf ("Total de derrotas: %d\n", total_vitorias);
+                printf ("Total de empates: %d\n", total_empates);
+                printf ("Total de derrotas: %d\n", total_derrotas);
 
                 printf ("Soma dos pontos: %d\n", soma_pontos);
                 printf ("Média de pontos: %.2f\n", media_pontos);

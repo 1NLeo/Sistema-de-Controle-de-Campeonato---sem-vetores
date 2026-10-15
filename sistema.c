@@ -125,7 +125,7 @@ int main () {
                 
             }
 
-            media_pontos = soma_pontos / qtd_equipes;
+            media_pontos = (float)soma_pontos / qtd_equipes;
         
         break;
         
